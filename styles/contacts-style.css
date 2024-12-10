@@ -44,6 +44,10 @@
         width: 100%;
         padding-right: 0;
     }
+    .contacts-wrapper{
+        max-width: 504px;
+        margin: 0 auto;
+    }
     .contacts-section .card-img{
         height: 624px;
     }

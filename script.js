@@ -16,19 +16,20 @@ burger.addEventListener("click", () => {
 
 
 const catalogList = document.querySelector(".catalog-list");
-const overlayClose = document.querySelector(".overlay-close");
+// const overlayClose = document.querySelector(".overlay-close");
 const catalogMenu = document.querySelector(".catalog-menu");
 const overlay = document.querySelector(".overlay");
 
 if(window.innerWidth > 950) {
-    overlayClose.addEventListener("click", () => {
-        overlay.style.visibility = "hidden";
-        overlay.style.opacity = "0";
-        catalogMenu.style.right = "-1000%";
-        document.body.classList.remove("no-scroll"); 
-        catalogMenu.classList.remove("active"); 
-        overlay.classList.remove("active"); 
-    })
+    // overlayClose.addEventListener("click", () => {
+    //     overlay.style.visibility = "hidden";
+    //     overlay.style.opacity = "0";
+    //     // catalogMenu.style.right = "-1000%";
+
+    //     document.body.classList.remove("no-scroll"); 
+    //     catalogMenu.classList.remove("active"); 
+    //     overlay.classList.remove("active"); 
+    // })
     
     catalogList.addEventListener("mouseenter", () => {
         catalogMenu.classList.add("active");
@@ -39,8 +40,7 @@ if(window.innerWidth > 950) {
         catalogMenu.style.right = "0";
     })
     
-    // Добавляем обработчик mouseleave
-    catalogList.addEventListener("mouseleave", () => {
+    catalogMenu.addEventListener("mouseleave", () => {
         catalogMenu.classList.remove("active");
         overlay.classList.remove("active");
         document.body.classList.remove("no-scroll");
